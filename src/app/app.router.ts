@@ -1,5 +1,6 @@
 import {Routes} from '@angular/router';
+import {authRoutes} from './auth/auth.routes';
 
-const appRoutes: Routes = [
-
+export const appRoutes: Routes = [
+  ...authRoutes
 ];
