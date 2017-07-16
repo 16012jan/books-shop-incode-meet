@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
 
 import { MaterialModule } from './material.module/material.module';
 import {AuthModule} from './auth/auth.module';
 
-import {appRoutes} from './app.router';
+import { AppRouting} from './app.router';
 
 import { AppComponent } from './app.component';
 import {FooterComponent} from './shared/footer/footer.component';
@@ -23,9 +22,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     NoopAnimationsModule,
-    RouterModule.forRoot(appRoutes),
+    AppRouting,
     MaterialModule,
-    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
