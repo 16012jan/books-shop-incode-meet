@@ -1,0 +1,19 @@
+section.books {
+  h2 {
+    text-align: center;
+  }
+  md-card.books {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 3%;
+
+    .mat-card-image {
+      width: auto;
+    }
+
+    .header-image {
+      background-size: cover;
+    }
+  }
+
+}

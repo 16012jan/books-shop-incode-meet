@@ -1,3 +1,21 @@
-<p>
-  books works!
-</p>
+<section class="books">
+  <h2>Books</h2>
+  <md-card class="books" *ngFor="let book of books">
+    <md-card-header>
+      <div md-card-avatar class="header-image" [ngStyle]="{'background-image': 'url('+book.authorAvatar+')' }"></div>
+      <md-card-title>{{book.name}}</md-card-title>
+      <md-card-subtitle>{{book.author}}</md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="https://vignette4.wikia.nocookie.net/marvel_dc/images/5/5c/Watchmen_HC.jpg/revision/latest?cb=20080618051226">
+    <md-card-content>
+      <p>
+        {{book.description}}
+      </p>
+    </md-card-content>
+
+    <md-card-actions>
+      <button md-button (click)="likePlus(book)">Like <span class="likes">{{book.likes}}</span></button>
+      <button md-button color="accent">Buy book</button>
+    </md-card-actions>
+  </md-card>
+</section>
