@@ -17,4 +17,22 @@ md-icon.toolbar-icon {
   cursor: pointer;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.spacer {
+  flex: 1;
+}
 
+md-input-container.full-width {
+  width: 100%;
+}
+
+md-card.form-card {
+  max-width: 50%;
+  md-card-title {
+    text-align: center;
+  }
+}
