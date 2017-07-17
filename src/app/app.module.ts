@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { MaterialModule } from './material.module/material.module';
-import {AuthModule} from './auth/auth.module';
 
 import { AppRouting} from './app.router';
 
