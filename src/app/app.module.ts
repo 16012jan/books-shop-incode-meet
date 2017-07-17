@@ -10,6 +10,8 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {HeaderComponent} from './shared/header/header.component';
 import { HomeComponent } from './home/home.component';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import {CartComponent} from './shop/cart/cart.component';
+import {CartService} from './shop/services/cart.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     AppRouting,
     MaterialModule,
   ],
-  providers: [],
+  entryComponents: [
+    CartComponent
+  ],
+  providers: [
+    CartService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

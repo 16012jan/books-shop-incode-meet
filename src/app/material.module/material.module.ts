@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 
 import {
   MdButtonModule, MdToolbarModule, MdIconModule, MdCardModule, MdInputModule,
-  MdChipsModule
+  MdChipsModule, MdGridListModule
 } from '@angular/material';
 
 @NgModule({
@@ -12,7 +12,8 @@ import {
     MdButtonModule,
     MdCardModule,
     MdInputModule,
-    MdChipsModule
+    MdChipsModule,
+    MdGridListModule
   ],
   exports: [
     MdToolbarModule,
@@ -20,7 +21,8 @@ import {
     MdButtonModule,
     MdCardModule,
     MdInputModule,
-    MdChipsModule
+    MdChipsModule,
+    MdGridListModule
   ],
   declarations: []
 })

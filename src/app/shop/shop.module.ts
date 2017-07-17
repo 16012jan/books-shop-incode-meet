@@ -14,10 +14,9 @@ import {CartService} from './services/cart.service';
   ],
   declarations: [
     BooksComponent,
-    CartComponent,
   ],
   providers: [
     CartService
-  ]
+  ],
 })
 export class ShopModule { }

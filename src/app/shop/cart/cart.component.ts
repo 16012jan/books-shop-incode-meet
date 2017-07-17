@@ -10,12 +10,15 @@ import {Book} from '../../shared/classes/book';
 export class CartComponent implements OnInit {
 
   public books: Array<Book>;
-  constructor(private cartService: CartService) { }
-
-  ngOnInit() {
+  constructor(private cartService: CartService) {
     this.cartService.book$.subscribe((book: Book) => {
+      console.log('Im HERE');
       this.books.push(book);
     });
+  }
+
+  ngOnInit() {
+
   }
 
 }

@@ -3,9 +3,10 @@ section.books {
     text-align: center;
   }
   md-card.books {
-    margin: 0 auto;
-    width: 30%;
+    width: 25%;
     margin-bottom: 3%;
+    margin-left: 3%;
+    float: left;
 
     .mat-card-image {
       width: auto;

@@ -7,4 +7,8 @@
   <button md-mini-fab routerLink="/auth/sign-in">
     <md-icon class="toolbar-icon">exit_to_app</md-icon>
   </button>
+  <button md-mini-fab (click)="showCart()">
+    <md-icon class="toolbar-icon">shopping_cart</md-icon>
+  </button>
+  <div #cart></div>
 </md-toolbar>
