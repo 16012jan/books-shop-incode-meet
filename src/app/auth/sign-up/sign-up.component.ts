@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {VALIDATORS} from '../../shared/validators.const';
 
 @Component({
   selector: 'books-shop-sign-up',
@@ -14,15 +15,9 @@ export class SignUpComponent {
               private fb: FormBuilder) {
 
     this.signUpForm = fb.group({
-      email: [null, [
-        Validators.required,
-        Validators.pattern('.+?@.+?\\..+')]
-      ],
+      email: [null, VALIDATORS.email],
       passwordGroup: fb.group({
-        password: [null, [
-          Validators.required,
-          Validators.minLength(6)]
-        ],
+        password: [null, VALIDATORS.password],
         passwordConfirmation: [null]
       }, { validator: this.equalValidator })
     })
