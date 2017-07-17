@@ -15,7 +15,9 @@
 
     <md-card-actions>
       <button md-button (click)="likePlus(book)">Like <span class="likes">{{book.likes}}</span></button>
-      <button md-button color="accent">Buy book</button>
+      <button md-button color="accent" (click)="buyBook(book)">
+        Buy book <md-icon>add_shopping_cart</md-icon>
+      </button>
     </md-card-actions>
   </md-card>
 </section>

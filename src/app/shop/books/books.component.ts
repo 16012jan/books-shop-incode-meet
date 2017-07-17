@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Book, BOOKS_MOK} from '../../shared/classes/book';
+import {CartService} from '../services/cart.service';
 
 @Component({
   selector: 'books-shop-books',
@@ -7,44 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent implements OnInit {
 
-  public books;
-  constructor() { }
+  public books: Array<Book>;
+  constructor(private cartService: CartService) { }
 
   ngOnInit() {
-    this.books = [
-      {
-        name: 'Watchman',
-        author: 'Alan Moore',
-        authorAvatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2010/09/alan-moore1.jpg',
-        description: 'This is the best comics',
-        likes: 250
-      },
-      {
-        name: 'Watchman',
-        author: 'Alan Moore',
-        authorAvatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2010/09/alan-moore1.jpg',
-        description: 'This is the best comics',
-        likes: 250
-      },
-      {
-        name: 'Watchman',
-        author: 'Alan Moore',
-        authorAvatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2010/09/alan-moore1.jpg',
-        description: 'This is the best comics',
-        likes: 250
-      },
-      {
-        name: 'Watchman',
-        author: 'Alan Moore',
-        authorAvatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2010/09/alan-moore1.jpg',
-        description: 'This is the best comics',
-        likes: 250
-      }
-    ]
+    this.books = BOOKS_MOK;
   }
 
-  public likePlus(book) {
+  public likePlus(book: Book) {
     book.likes += 1;
+  }
+
+  public buyBook(book: Book) {
+    this.cartService.book$.next(book);
   }
 
 }
