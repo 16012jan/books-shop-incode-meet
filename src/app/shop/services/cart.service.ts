@@ -6,7 +6,12 @@ import {Book} from '../../shared/classes/book';
 export class CartService {
 
   public book$: Subject<Book> = new Subject<Book>();
+  public book: Book;
 
   constructor() { }
+
+  public sendBook(book) {
+    this.book$.next(book);
+  }
 
 }

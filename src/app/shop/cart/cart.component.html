@@ -1,3 +1,10 @@
-{{books | json}}
-
-<p>Cart Works</p>
+<ng-container *ngIf="books.length > 0; else noBooks">
+  <ul class="books-list">
+    <li *ngFor="let book of books">
+      <span>{{book.name}} <md-icon (click)="deleteBook(book)">delete_forever</md-icon></span>
+    </li>
+  </ul>
+</ng-container>
+<ng-template #noBooks>
+  <p>No books</p>
+</ng-template>

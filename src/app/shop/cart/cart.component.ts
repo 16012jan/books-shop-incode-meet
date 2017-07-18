@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {CartService} from '../services/cart.service';
+import {Component} from '@angular/core';
 import {Book} from '../../shared/classes/book';
 
 @Component({
@@ -7,18 +6,15 @@ import {Book} from '../../shared/classes/book';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements OnInit {
+export class CartComponent {
 
-  public books: Array<Book>;
-  constructor(private cartService: CartService) {
-    this.cartService.book$.subscribe((book: Book) => {
-      console.log('Im HERE');
-      this.books.push(book);
-    });
-  }
+  public books: Array<Book> = [];
 
-  ngOnInit() {
+  constructor() {}
 
+  public deleteBook(book: Book) {
+    const index = this.books.indexOf(book);
+    this.books.splice(index, 1);
   }
 
 }

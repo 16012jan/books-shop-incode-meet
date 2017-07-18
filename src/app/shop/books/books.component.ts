@@ -21,7 +21,7 @@ export class BooksComponent implements OnInit {
   }
 
   public buyBook(book: Book) {
-    this.cartService.book$.next(book);
+    this.cartService.sendBook(book);
   }
 
 }
